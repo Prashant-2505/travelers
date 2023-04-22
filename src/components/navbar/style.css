@@ -1,0 +1,54 @@
+.Navbar
+{
+    width: 95%;
+    height: 80px;
+    background-color: white;
+    position: fixed; 
+    border-radius: 10px;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    border: 1px solid grey;
+    transform: translate(2%);
+    transition: transform 0.2s ease-out;
+}
+.navbar--hidden {
+    transform: translateY(-100%);
+  }
+.logo
+{
+    font-weight: 800;
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: black;
+}
+.nav-itmes
+{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 4rem;
+}
+.items 
+{
+    cursor: pointer;
+    font-weight: 400;
+    color: black;
+}
+.items:hover
+{
+    color: grey;
+}
+.contact
+{
+    color: black;
+    display: flex;
+    align-items: center;
+}
+.icon
+{
+    margin-right: 6px;
+}

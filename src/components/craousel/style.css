@@ -1,0 +1,49 @@
+
+.slides {
+    width: 100%;
+    height: 90vh;
+}
+
+.Cimg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.data {
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   padding-top: 5rem;
+}
+.data h1
+{
+    font-weight: 800;
+    color: white;
+    padding-top: 3rem;
+}
+.data p
+{
+    padding-top: 3rem;
+    text-transform: uppercase;
+    word-spacing: 4px;
+    color: white;
+}
+.data button
+{
+color: white;
+padding: 1rem 2rem;
+margin-top: 3rem;
+background-color: #232323;
+}
+.data button:hover
+{
+    transform: scale(1.1);
+    background-color: #232323;
+    color: white;
+    transition: 300ms ease-in;
+}
+
