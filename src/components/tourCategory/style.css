@@ -1,0 +1,52 @@
+.tourCategory {
+    width: 100%;
+    height: 100vh;
+    border: 2px solid pink;
+    background-color: #F8F8F8;
+    padding: 4rem 0;
+    margin-top: 5rem;
+}
+
+.tourCategory-heading {
+    text-align: center;
+}
+
+.tourCategory-cards {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.tourCategory-card {
+    width: 20vw;
+    height: 60vh;
+    position: relative;
+    cursor: pointer;
+    -webkit-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
+    box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
+}
+.tourCategory-card:hover
+{
+    box-shadow: none;
+    transition: 100ms ease-in;
+}
+
+.tourCategory-card-img {
+    width: 50%;
+    height: 40%;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 26%;
+}
+
+.tourCategory-card-data {
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

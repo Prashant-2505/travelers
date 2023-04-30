@@ -1,16 +1,24 @@
 import React from 'react'
 import './style.css'
-import { CButton, CCarousel } from '@coreui/react';
+import {CCarousel } from '@coreui/react';
 import { CCarouselItem } from '@coreui/react'
 import '@coreui/coreui/dist/css/coreui.min.css';
+import family from '../../assets/image/family.jpg'
+import wildlife from '../../assets/image/wildlife.jpg'
+import romantic from '../../assets/image/romantic.jpg'
+
+
+
+
 const Craousel2 = () => {
     return (
         <div>
             <CCarousel className='CCarousel' controls dark>
+              
                 <CCarouselItem>
                     <div className="a">
                         <div className="parent">
-                            <img src="https://images.unsplash.com/photo-1559734840-f9509ee5677f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt="" className="parent-img" />
+                            <img src={family} alt="" className="parent-img" />
                             <div className="child">
                                 <div className="heading">
                                     <h4>Family</h4>
@@ -26,7 +34,7 @@ const Craousel2 = () => {
                 <CCarouselItem>
                     <div className="a">
                         <div className="parent">
-                            <img src="https://images.unsplash.com/photo-1537694513497-5f0b0ec361c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzZ8fHdpbGRsaWZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" className="parent-img" />
+                            <img src={wildlife} alt="" className="parent-img" />
                             <div className="child">
                                 <div className="heading">
                                     <h4>Wildlife</h4>
@@ -42,7 +50,7 @@ const Craousel2 = () => {
                     <div className="a">
                         <div className="parent">
                             <img
-                                src="https://images.unsplash.com/photo-1453775910522-5d45ac4f0eae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzN8fHJvbWFudGljfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" className="parent-img" />
+                                src={romantic} alt="" className="parent-img" />
                             <div className="child">
                                 <div className="heading">
                                     <h4>Romantic</h4>

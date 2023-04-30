@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './style.css';
 import { BsArrowRightCircleFill } from 'react-icons/bs';
+import traveler from '../../assets/image/traveler.jpg'
 
 const Hero = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
@@ -30,7 +31,7 @@ const Hero = () => {
   return (
     <div className='hero'>
       <div className='hero-image-div' ref={heroImageRef}>
-        <img className='hero-image' src='https://media.istockphoto.com/id/1141196125/photo/hiking-in-the-allgaeu-alps.jpg?b=1&amp;s=170667a&amp;w=0&amp;k=20&amp;c=TQF-GqLyM0jEtlSKEp-vjHr5mX8GpTrTyMrLWFKSFEI=' alt='' />
+        <img className='hero-image' src={traveler} alt='' />
       </div>
       <div className='hero-data' ref={heroDataRef}>
         <div className='heading'>

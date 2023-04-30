@@ -6,20 +6,20 @@
     height: 90vh;
     justify-content:space-around;
     padding: 3rem 0 0 0;
-   
+    margin-bottom: 5rem;
 }
 
 .hero-image-div
 {
     width: 50%;
-    height: 70vh;
 }
 .hero-image
 {
   width: 100%;
-  height: 60vh;
-  border-radius: 10px;
+  height: 100%;
   padding-top: 2rem;
+  object-fit: cover;
+ 
 }
 .hero-data
 {
