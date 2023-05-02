@@ -13,6 +13,7 @@ const TourCategory = () => {
                     <div className="tourCategory-card-data">
                         <p>Discover forest</p>
                         <p>+99 Destinations</p>
+                        <button>explore all tours</button>
                     </div>
                 </div>
 
@@ -21,6 +22,7 @@ const TourCategory = () => {
                     <div className="tourCategory-card-data">
                         <p>Discover forest</p>
                         <p>+99 Destinations</p>
+                        <button>explore all tours</button>
                     </div>
                 </div>
 
@@ -29,6 +31,8 @@ const TourCategory = () => {
                     <div className="tourCategory-card-data">
                         <p>Discover forest</p>
                         <p>+99 Destinations</p>
+                        <button>explore all tours</button>
+
                     </div>
                 </div>
 
@@ -37,6 +41,7 @@ const TourCategory = () => {
                     <div className="tourCategory-card-data">
                         <p>Discover forest</p>
                         <p>+99 Destinations</p>
+                        <button>explore all tours</button>
                     </div>
                 </div>
 

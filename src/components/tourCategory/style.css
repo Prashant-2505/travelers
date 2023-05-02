@@ -21,7 +21,6 @@
     width: 20vw;
     height: 60vh;
     position: relative;
-    cursor: pointer;
     -webkit-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
     box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
@@ -44,9 +43,27 @@
 
 .tourCategory-card-data {
     position: absolute;
-    bottom: 10%;
+    bottom: 8%;
     left: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.tourCategory-card-data button
+{
+    margin-top: 2rem;
+    padding: 5px;
+    font-size:12px;
+    text-transform: uppercase;
+    background-color: #232323;
+    color: white;
+    border: 1px solid #232323;
+
+}
+.tourCategory-card-data button:hover
+{
+    border: 1px solid #232323;
+    background-color: white;
+    color: #232323;
+    transition: 200ms ease;
 }
