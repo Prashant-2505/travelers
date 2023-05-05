@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Home from './page/home/Home';
 import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div>
       <Navbar/>
       <Home />
+      <Footer/>
     </div>
   );
 }
