@@ -1,9 +1,11 @@
-import React from 'react'
 import './style.css'
 import { AiTwotoneStar } from 'react-icons/ai'
 import { BsFillPersonFill } from 'react-icons/bs'
+import { collection, getDocs } from 'firebase/firestore'
+
 
 const CustomerReview = () => {
+
     return (
         <div className='review'>
             <h3>customer reviews</h3>

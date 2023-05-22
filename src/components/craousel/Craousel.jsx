@@ -4,7 +4,7 @@ import { CCarouselItem } from '@coreui/react'
 import { CCarouselCaption } from '@coreui/react'
 import '@coreui/coreui/dist/css/coreui.min.css';
 import './style.css'
-import API from '../../dummyApi'
+import API from '../../apiHelper/dummyApi'
 
 const Carousel = () => {
     return (

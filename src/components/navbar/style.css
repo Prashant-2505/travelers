@@ -3,7 +3,6 @@
     height: 80px;
     background-color: white;
     position: fixed;
-    position: fixed;
     z-index: 2;
     display: flex;
     justify-content: space-between;
@@ -11,6 +10,7 @@
     padding: 0 2rem;
     border: 1px solid grey;
     transition: transform 0.2s ease-out;
+    display: inline block;
 }
 
 .mobile {
