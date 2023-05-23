@@ -18,8 +18,8 @@ const CustomerReview = () => {
                             <BsFillPersonFill className='customer' />
                         </div>
                         <div className="customer-name">
-                            <p>Monu malik</p>
-                            <p>Teacher</p>
+                            <p>Prashant</p>
+                            <p>Student</p>
                             <p>
                                 <AiTwotoneStar className='star' />
                                 <AiTwotoneStar className='star' />
@@ -39,8 +39,8 @@ const CustomerReview = () => {
                             <BsFillPersonFill className='customer' />
                         </div>
                         <div className="customer-name">
-                            <p>Monu malik</p>
-                            <p>Teacher</p>
+                            <p>Prashant</p>
+                            <p>Student</p>
                             <p>
                                 <AiTwotoneStar className='star' />
                                 <AiTwotoneStar className='star' />
@@ -60,8 +60,8 @@ const CustomerReview = () => {
                             <BsFillPersonFill className='customer' />
                         </div>
                         <div className="customer-name">
-                            <p>Monu malik</p>
-                            <p>Teacher</p>
+                            <p>Prashant</p>
+                            <p>Student</p>
                             <p>
                                 <AiTwotoneStar className='star' />
                                 <AiTwotoneStar className='star' />
@@ -81,8 +81,8 @@ const CustomerReview = () => {
                             <BsFillPersonFill className='customer' />
                         </div>
                         <div className="customer-name">
-                            <p>Monu malik</p>
-                            <p>Teacher</p>
+                            <p>Prashant</p>
+                            <p>Student</p>
                             <p>
                                 <AiTwotoneStar className='star' />
                                 <AiTwotoneStar className='star' />
