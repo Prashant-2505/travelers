@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './style.css'
 import { BsFillArrowRightCircleFill } from 'react-icons/bs'
 import { Link } from 'react-router-dom';
-import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../../firebase';
 import cardApi from '../../apiHelper/cardApi';
 
 
@@ -51,8 +49,8 @@ const TopDestination = () => {
                     <Link to={`/packages/${data.id}`}>
                         <div className="card">
                             <div className="card-overlay"></div>
-                            <img className='card-img' src='https://images.unsplash.com/photo-1593844311291-2ec0164643c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3VqcmF0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60' alt="" />
-                            <p className='card-data'>{data.name}</p>
+                            <img className='card-img' src={data.url} alt="" />
+                            <div className='card-data'><p>{data.name}</p></div>
                             <div className='card-hover-data'>
                                 <BsFillArrowRightCircleFill className='card-icon' />
                                 <button>Explore more</button>
