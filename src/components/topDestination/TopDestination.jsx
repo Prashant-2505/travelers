@@ -1,77 +1,59 @@
-import React, { useEffect, useState } from 'react'
-import './style.css'
-import { BsFillArrowRightCircleFill } from 'react-icons/bs'
+import React, { useEffect, useState } from 'react';
+import './style.css';
+import { BsFillArrowRightCircleFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import cardApi from '../../apiHelper/cardApi';
 
-
-
 const TopDestination = () => {
+  const [animationTriggered, setAnimationTriggered] = useState(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const bannerElement = document.querySelector('.cards');
+      const { top, bottom } = bannerElement.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
 
-    const [animationTriggered, setAnimationTriggered] = useState(false);
-    const [packages, setPackages] = useState([])
+      if (top < windowHeight && bottom >= 0 && !animationTriggered) {
+        setAnimationTriggered(true);
+        bannerElement.classList.add('animate__animated', 'animate__fadeIn');
+      }
+    };
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const bannerElement = document.querySelector('.cards');
-            const { top, bottom } = bannerElement.getBoundingClientRect();
-            const windowHeight = window.innerHeight;
+    window.addEventListener('scroll', handleScroll);
 
-            if (top < windowHeight && bottom >= 0 && !animationTriggered) {
-                setAnimationTriggered(true);
-                bannerElement.classList.add('animate__animated', 'animate__bounceInUp');
-            }
-        };
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [animationTriggered]);
 
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [animationTriggered]);
-
-
-
-    return (
-        <div className='topDestination'>
-            <div className='topDestination-heading'>
-                <div>
-                    <h3>TOP DESTINATION</h3>
-                    <p>This is the most popular destination in the last month</p>
-                </div>
-                <div className='topDestination-btn'>
-                    <button>ALL DESTINATION</button>
-                </div>
-            </div>
-            <div className="cards">
-                {cardApi.map((data) => (
-                    <Link to={`/packages/${data.id}`}>
-                        <div className="card">
-                            <div className="card-overlay"></div>
-                            <img className='card-img' src={data.url} alt="" />
-                            <div className='card-data'><p>{data.name}</p></div>
-                            <div className='card-hover-data'>
-                                <BsFillArrowRightCircleFill className='card-icon' />
-                                <button>Explore more</button>
-                            </div>
-                        </div>
-                    </Link>
-                ))}
-            </div>
+  return (
+    <div className='topDestination'>
+      <div className='topDestination-heading'>
+        <div>
+          <h3>TOP DESTINATION</h3>
+          <p>This is the most popular destination in the last month</p>
         </div>
-    )
-}
+        <div className='topDestination-btn'>
+          <button>ALL DESTINATION</button>
+        </div>
+      </div>
+      <div className="cards">
+        {cardApi.map((data) => (
+          <Link to={`/packages/${data.id}`} key={data.id}>
+            <div className="card">
+              <div className="card-overlay"></div>
+              <img className='card-img' src={data.url} alt="" />
+              <div className='card-data'><p>{data.name}</p></div>
+              <div className='card-hover-data'>
+                <BsFillArrowRightCircleFill className='card-icon' />
+                <button>Explore more</button>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
 
-export default TopDestination
-
-
-{/* <div className="card">
-<div className="card-overlay"></div>
-<img className='card-img' src='https://images.unsplash.com/photo-1593844311291-2ec0164643c8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3VqcmF0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1200&q=60' alt="" />
-<p className='card-data'>Gujrat</p>
-<div className='card-hover-data'>
-    <BsFillArrowRightCircleFill className='card-icon' />
-    <button>Explore more</button>
-</div>
-</div> */}
+export default TopDestination;

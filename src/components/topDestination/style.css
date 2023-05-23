@@ -108,7 +108,7 @@
     transition: all 0.5s ease;
   }
   /* animation */
-.animate__animated.animate__bounceInUp {
+.animate__animated.animate__fadeIn {
     --animate-duration: 2s;
   }
 
