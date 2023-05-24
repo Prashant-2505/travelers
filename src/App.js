@@ -7,6 +7,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import About from './page/about/About';
 import Packages from './components/tourPackages/Packages';
+import PackageDetails from './components/packageDetails/PackageDetails';
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
           <Route path='/' element={<Home />}></Route>
           <Route path='/about/:id' element={<About />}></Route>
           <Route path='/packages/:state' element={<Packages/>}></Route>
+          <Route path='/packages/:state/:city' element={<PackageDetails/>}></Route>
+
         </Routes>
         {/* <Footer/> */}
       </Router>
