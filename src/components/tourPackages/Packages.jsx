@@ -49,7 +49,6 @@ const Packages = () => {
                 <div className="cardData">
                   <p key={doc.id}>{doc.Duration}</p>
                   <p>{doc.Destination}</p>
-                  <p>p</p>
                   <div className="star">
                     <AiTwotoneStar className='star' />
                     <AiTwotoneStar className='star' />
