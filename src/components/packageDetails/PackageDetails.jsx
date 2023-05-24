@@ -6,7 +6,6 @@ import { db } from '../../firebase';
 const PackageDetails = ({ data }) => {
   return (
     <div id='mainDiv'>
-      <p>{data.Destination}</p>
     </div>
   );
 };

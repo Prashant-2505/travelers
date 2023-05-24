@@ -42,13 +42,14 @@
     height: 50%;
     width: 100%;
     padding: 2.3rem 2rem 0 3rem;
-
+     text-decoration: none;
 }
 
 .cardData p:nth-Child(1) {
     color: grey;
     font-size: 13px;
     margin-bottom: 0.4rem;
+
 }
 
 .cardData p:nth-Child(2) {

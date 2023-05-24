@@ -41,7 +41,7 @@ const Packages = () => {
       ) : (
         <div className="cardWrapper">
           {city.map((doc) =>
-          <Link to ={{pathname:`${doc.id}`,state: { data: doc }}}>
+          <Link to ={`${doc.id}`}>
               <div className='packageCard'>
                 <div className="cardImg">
                   <img className='CardIMG' src={doc.Image} alt="" />
@@ -49,6 +49,7 @@ const Packages = () => {
                 <div className="cardData">
                   <p key={doc.id}>{doc.Duration}</p>
                   <p>{doc.Destination}</p>
+                  <p>p</p>
                   <div className="star">
                     <AiTwotoneStar className='star' />
                     <AiTwotoneStar className='star' />
@@ -59,7 +60,7 @@ const Packages = () => {
                 </div>
                 <div className="price">
                   <p>from  {doc.Price}</p>
-
+  
                 </div>
               </div>
             </Link>
