@@ -1,7 +1,130 @@
-#mainDiv
-{
+#mainDiv {
     height: 100vh;
     width: 100%;
     padding-top: 5rem;
-    background-color: blueviolet;
+}
+
+#mainDiv>h1 {
+    text-align: center;
+    margin-top: 1rem;
+    color: #ff8869;
+    text-transform: capitalize;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 2.5rem;
+}
+
+#mainDiv>h3 {
+    text-align: center;
+}
+
+#cardWrapper {
+    width: 80%;
+    height: 60vh;
+    margin: 2rem auto;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 10px 5px 75px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 10px 5px 75px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 5px 75px 0px rgba(0, 0, 0, 0.75);
+}
+
+#cardCraousel {
+    width: 60%;
+    height: 100%;
+    position: relative;
+
+}
+
+#cardCraousel img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    padding: 1rem;
+    border-radius: 30px;
+
+}
+
+.Cbtn {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 40%;
+    z-index: 3;
+    font-size: 2.5rem;
+    color: #ff8869;
+    overflow: hidden;
+
+}
+
+.CLicon {
+    cursor: pointer;
+    opacity: 0.5;
+    position: relative;
+    left: -1rem;
+}
+
+.CLicon:hover {
+    opacity: 0.9;
+    transition: 200ms ease-in;
+    left: 0;
+    cursor: pointer;
+}
+
+.CRicon {
+    cursor: pointer;
+    opacity: 0.5;
+    position: relative;
+    right: -1rem;
+}
+
+.CRicon:hover {
+    opacity: 0.9;
+    transition: 200ms ease-in;
+    right: 0;
+    cursor: pointer;
+}
+
+#cardData {
+    width: 40%;
+    height: 100%;
+    padding: 2rem 3rem;
+}
+
+#cardData p:nth-child(1) {
+    color: black;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+#cardData p:nth-child(2) {
+    color: grey;
+    margin-bottom: 1rem;
+}
+
+#cardData p:nth-child(3) {
+    color: #ff8869;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.CBtn
+{
+    margin-top: 2rem;
+}
+.CBtn button
+{
+    padding: 0.5rem 2rem;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid #232323;
+    background-color: #232323;
+    color: white;
+    font-size: 12px;
+}
+.CBtn button:hover
+{
+    color: #232323;
+    background-color: white;
+    transition: 200ms ease-in-out;
 }
