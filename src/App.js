@@ -7,7 +7,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import About from './page/about/About';
 import Packages from './components/tourPackages/Packages';
-import PackageDetails from './components/packageDetails/PackageDetails';
+import PackageDetails from './page/packageDetails/PackageDetails';
 
 
 function App() {
