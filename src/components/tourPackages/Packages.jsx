@@ -20,7 +20,6 @@ const Packages = () => {
         snapshot.forEach((doc) => {
           data.push({ id: doc.id, ...doc.data() });
         });
-        console.log(data);
         setCity(data);
       } catch (error) {
         console.error(error);
@@ -40,32 +39,34 @@ const Packages = () => {
         <p>{<Spinner />}</p>
       ) : (
         <div className="cardWrapper">
-          {city.map((doc) =>
-          <Link to ={`${doc.id}`}>
-              <div className='packageCard'>
-                <div className="cardImg">
-                  <img className='CardIMG' src={doc.Image} alt="" />
-                </div>
-                <div className="cardData">
-                  <p key={doc.id}>{doc.Duration}</p>
-                  <p>{doc.Destination}</p>
-                  <div className="star">
-                    <AiTwotoneStar className='star' />
-                    <AiTwotoneStar className='star' />
-                    <AiTwotoneStar className='star' />
-                    <AiTwotoneStar className='star' />
-                  </div>
-                  <p style={{ color: 'grey', marginTop: '0.4rem', fontSize: '13px' }}>20 reviews</p>
-                </div>
-                <div className="price">
-                  <p>from  {doc.Price}</p>
-  
-                </div>
-              </div>
-            </Link>
-          )}
+      {city.map((doc) => (
+  <Link key={doc.id} to={`/${state}/${doc.id}`} className="link">
+    <div className='packageCard'>
+      <div className="cardImg">
+        <img className='CardIMG' src={doc.Image} alt="" />
+      </div>
+      <div className="cardData">
+        <p>{doc.Duration}</p>
+        <p>{doc.Destination}</p>
+        <div className="star">
+          <AiTwotoneStar className='star' />
+          <AiTwotoneStar className='star' />
+          <AiTwotoneStar className='star' />
+          <AiTwotoneStar className='star' />
+        </div>
+        <p style={{ color: 'grey', marginTop: '0.4rem', fontSize: '13px' }}>20 reviews</p>
+      </div>
+      <div className="price">
+        <p>from  {doc.Price}</p>
+      </div>
+    </div>
+  </Link>
+))}
+
+        
         </div>
       )}
+      
     </div>
   );
 };

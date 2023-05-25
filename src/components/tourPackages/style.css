@@ -74,3 +74,6 @@
     font-size: 15px;
     padding: 0.4rem 0.8rem;
 }
+.link {
+    text-decoration: none;
+  }
