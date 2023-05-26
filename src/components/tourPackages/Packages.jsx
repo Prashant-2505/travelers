@@ -38,7 +38,7 @@ const Packages = () => {
       {loading ? (
         <p>{<Spinner />}</p>
       ) : (
-        <div className="cardWrapper">
+        <div className="cardWrapper fadeIn">
       {city.map((doc) => (
   <Link key={doc.id} to={`/${state}/${doc.id}`} className="link">
     <div className='packageCard'>

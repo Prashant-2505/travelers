@@ -59,7 +59,7 @@ const PackageDetails = () => {
   }, [state, city]);
 
   return (
-    <div id='mainDiv'>
+    <div id='mainDiv' >
       {loading ? (
         <Spinner />
       ) : (
@@ -67,7 +67,7 @@ const PackageDetails = () => {
           <h1>Welcome to {data?.Destination}</h1>
           <h3>Your journey Your story</h3>
 
-          <div id='cardWrapper'>
+          <div id='cardWrapper' >
             <div id='cardCraousel'>
               <img src={data?.Craousel[currentIndex]} alt="" />
               <div className="Cbtn">

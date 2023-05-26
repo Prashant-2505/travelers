@@ -30,7 +30,8 @@
     padding-top: 3rem;
     text-transform: uppercase;
     word-spacing: 4px;
-    color: white;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
 }
 .data button
 {
