@@ -9,6 +9,7 @@ import About from './page/about/About';
 import Packages from './components/tourPackages/Packages';
 import PackageDetails from './page/packageDetails/PackageDetails';
 import SignIn from './page/signIn/SignIn';
+import SignUp from './page/signUp/SignUp';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path='/packages/:state' element={<Packages/>}></Route>
           <Route path='/:state/:city' element={<PackageDetails/>}></Route>
           <Route path='/SignIn' element={<SignIn/>}></Route>
+          <Route path='/SignUp' element={<SignUp/>}></Route>
         </Routes>
         {/* <Footer/> */}
       </Router>
