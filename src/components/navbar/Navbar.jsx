@@ -4,6 +4,7 @@ import { RxHamburgerMenu } from 'react-icons/rx'
 import { AiOutlineCloseSquare } from 'react-icons/ai'
 
 import './style.css'
+import { Link } from 'react-router-dom'
 const Navbar = () => {
 
   const [clicked, setClicked] = useState(false)
@@ -44,7 +45,9 @@ const Navbar = () => {
           <li className='items'>About</li>
           <li className='items'>Contact</li>
         </ul>
+        <Link to ='/signIn'>
         <button className='sign-up'>sign-up</button>
+        </Link>
       </div>
   
       <div className="mobile" onClick={handleClick}>
