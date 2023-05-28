@@ -10,6 +10,8 @@ import Packages from './components/tourPackages/Packages';
 import PackageDetails from './page/packageDetails/PackageDetails';
 import SignIn from './page/signIn/SignIn';
 import SignUp from './page/signUp/SignUp';
+import Profile from './page/profile/Profile';
+import PrivateRoute from './route/PrivateRoute';
 
 
 function App() {
@@ -19,11 +21,16 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}></Route>
-          <Route path='/about/:id' element={<About />}></Route>
-          <Route path='/packages/:state' element={<Packages/>}></Route>
-          <Route path='/:state/:city' element={<PackageDetails/>}></Route>
-          <Route path='/SignIn' element={<SignIn/>}></Route>
-          <Route path='/SignUp' element={<SignUp/>}></Route>
+          <Route path='/about' element={<About />}></Route>
+          <Route path='/packages/:state' element={<Packages />}></Route>
+          <Route path='/:state/:city' element={<PackageDetails />}></Route>
+          <Route path='/SignIn' element={<SignIn />}></Route>
+          <Route path='/SignUp' element={<SignUp />}></Route>
+
+          <Route path='/Profile' element={<PrivateRoute />}>
+            <Route path='/Profile' element={<Profile />}></Route>
+          </Route>
+
         </Routes>
         {/* <Footer/> */}
       </Router>

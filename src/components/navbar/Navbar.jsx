@@ -5,11 +5,14 @@ import { AiOutlineCloseSquare } from 'react-icons/ai'
 
 import './style.css'
 import { Link } from 'react-router-dom'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
 const Navbar = () => {
 
   const [clicked, setClicked] = useState(false)
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [pagestate,setPageState] = useState('SignIn')
+  const auth = getAuth()
 
   /* This is a React hook called `useEffect` that is used to perform side effects in functional
   components. In this case, it is used to add an event listener to the window object that listens
@@ -36,20 +39,42 @@ const Navbar = () => {
     setClicked(!clicked)
   }
 
+  useEffect(()=>
+  {
+    onAuthStateChanged(auth,(user)=>
+    {
+      if(user)
+      {
+     setPageState('Profile')
+      }
+      else
+      {
+        setPageState('SignIn')
+      }
+    })
+  },[auth])
+
+
   return (
     <div className={`Navbar ${showNavbar ? '' : 'navbar--hidden'} ${clicked ? 'mobile-nav' : ''}`}>
       <div className='logo'>travellers</div>
-      <div className={`${clicked?'nav active':'nav'}`}>
+      <div className={`${clicked ? 'nav active' : 'nav'}`}>
         <ul className='nav-items'>
-          <li className='items'>Home</li>
-          <li className='items'>About</li>
-          <li className='items'>Contact</li>
+          <Link to='/' className='link'>
+            <li className='items'>Home</li>
+          </Link>
+          <Link to='/about' className='link'>
+            <li className='items'>About</li>
+          </Link>
+          <Link to='/contact' className='link'>
+            <li className='items'>Contact</li>
+          </Link>
         </ul>
-        <Link to ='/signIn'>
-        <button className='sign-up'>sign-up</button>
+        <Link to={`/${pagestate}`}>
+          <button className='sign-up'>{pagestate}</button>
         </Link>
       </div>
-  
+
       <div className="mobile" onClick={handleClick}>
         {clicked ? (<AiOutlineCloseSquare className='close' />) : (<RxHamburgerMenu className='hamburger' />)}
       </div>

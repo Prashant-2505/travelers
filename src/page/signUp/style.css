@@ -6,7 +6,7 @@
 .SignInform
 {
     width: 40%;
-    height: 50vh;
+    height: 60vh;
     background-color: white;
     border-radius: 10px;
     margin-top: 3rem;
@@ -26,6 +26,7 @@
 {
    height: 2.5rem;
    outline: none;
+   padding: 1rem;
 }
 input:focus
 {
