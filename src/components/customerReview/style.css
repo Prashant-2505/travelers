@@ -91,4 +91,22 @@
         overflow-x: scroll;
     }
   }
+  @media (max-width: 400px) {
+    .review {
+        margin:  0;
+        width: 100vw;
+        display: grid;
+        background-color: aliceblue;
+    }
+    .R-card {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        height: 40vh;
+        overflow-x: scroll;
+    }
+    .review-card
+    {
+        width: 100%;
+    }
+  }
   
