@@ -67,3 +67,66 @@
     transition: 200ms ease-in-out;
     color: #232323;
 }
+
+@media (max-width: 820px)
+{
+  .a
+   {
+    height: 70%;
+   }
+   .parent
+   {
+    height: 40vh;
+   }
+   .parent-img
+   {
+    height: 100%;
+   }
+   .child
+   {
+    height: 60%;
+   }
+   .heading h4 
+   {
+    margin-bottom: 10px;
+   }
+   .heading p
+   {
+    font-size: 1rem;
+   }
+}
+
+@media (max-width: 400px)
+{
+  .a
+   {
+    height: 70%;
+    border: 1px solid red;
+   }
+   .parent
+   {
+    height: 40vh;
+   }
+   .parent-img
+   {
+    height: 100%;
+    filter: brightness(80%);
+
+}
+   .child
+   {
+    height: 60%;
+    width: 100%;
+    background-color: transparent;
+    filter: brightness(100%);
+   }
+   .heading h4 
+   {
+    margin-bottom: 10px;
+    overflow-y: auto;
+   }
+   .heading p
+   {
+    font-size: 1rem;
+   }
+}
