@@ -50,8 +50,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="SignInDiv" style={{ backgroundImage: `url(${SignUpSvg})`, height: '100vh', paddingTop: '5rem' }}>
-      <div className="SignInform">
+    <div className="SignUpDiv" style={{ backgroundImage: `url(${SignUpSvg})`, height: '100vh', paddingTop: '5rem' }}>
+      <div className="SignUpform">
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="User name" id="name" value={name} onChange={handleChange} />
           <input type="tel" placeholder="Phone" id="phoneNumber" value={phoneNumber} onChange={handleChange} />
