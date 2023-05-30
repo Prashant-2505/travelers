@@ -72,3 +72,23 @@
     color: #FF8869;
     font-size: 1.3rem;
 }
+
+
+
+/* meadia query */
+
+@media (max-width: 820px) {
+    .review {
+        margin:  0;
+        padding: 2;
+        width: 100%;
+        display: grid;
+        background-color: aliceblue;
+    }
+    .R-card {
+        gap: 2rem;
+        height: 25vh;
+        overflow-x: scroll;
+    }
+  }
+  

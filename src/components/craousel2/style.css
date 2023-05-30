@@ -101,7 +101,7 @@
   .a
    {
     height: 70%;
-    border: 1px solid red;
+    padding: 0;
    }
    .parent
    {
@@ -115,10 +115,11 @@
 }
    .child
    {
-    height: 60%;
+    height: 100%;
     width: 100%;
     background-color: transparent;
     filter: brightness(100%);
+    
    }
    .heading h4 
    {

@@ -1,7 +1,6 @@
 .mainDiv {
     height: 100vh;
     padding-top: 5rem;
-
 }
 
 .cardWrapper {
@@ -14,17 +13,17 @@
 
 .packageCard {
     margin: 3.2rem 2rem;
-    height:70vh;
+    height: 70vh;
     position: relative;
     cursor: pointer;
     box-shadow: 3px 9px 17px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 3px 9px 17px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 9px 17px 0px rgba(0, 0, 0, 0.75);
 }
-.packageCard:hover
-{
-  transform: translatey(10px);  
-  transition: 200ms ease;
+
+.packageCard:hover {
+    transform: translatey(10px);
+    transition: 200ms ease;
 }
 
 .cardImg {
@@ -42,7 +41,7 @@
     height: 50%;
     width: 100%;
     padding: 2.3rem 2rem 0 3rem;
-     text-decoration: none;
+    text-decoration: none;
 }
 
 .cardData p:nth-Child(1) {
@@ -74,13 +73,14 @@
     font-size: 15px;
     padding: 0.4rem 0.8rem;
 }
+
 .link {
     text-decoration: none;
-  }
+}
 
 
 
-  
+
 /* animation */
 .fadeIn {
     -webkit-animation-name: fadeIn;
@@ -89,12 +89,68 @@
     animation-duration: 2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
     }
-    @-webkit-keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
+
+    100% {
+        opacity: 1;
     }
-    @keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-    } 
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* meadia query */
+
+@media (max-width:820px) {
+    .cardWrapper {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.4rem;
+    }
+
+    .packageCard {
+        margin: 3.2rem 2rem;
+        height: 35vh;
+        width: 25vw;
+        position: relative;
+    }
+}
+
+@media (max-width:400px) {
+    h2 {
+        position: relative;
+        left: 24%;
+    }
+
+    .cardWrapper {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px
+    }
+
+    .packageCard {
+        margin: 3.2rem 2rem;
+        height: 45vh;
+        width: 55vw;
+        margin-bottom: 0;
+        position: relative;
+    }
+}
