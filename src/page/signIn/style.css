@@ -79,3 +79,16 @@ input:focus
    
     }
   }
+
+  @media (max-width:820px) {
+    .SignInDiv {
+      padding-top: 20%;
+    }
+    
+    .SignInform {
+      width: 70%;
+      height: 60%;
+      background-color: white;
+   
+    }
+  }
