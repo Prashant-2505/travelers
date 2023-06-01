@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
-import './style.css';
-import { BsArrowRightCircleFill } from 'react-icons/bs';
-import traveler from '../../assets/image/traveler.jpg'
+import React, { useEffect, useRef, useState } from "react";
+import "./style.css";
+import { BsArrowRightCircleFill } from "react-icons/bs";
+import traveler from "../../assets/image/traveler.jpg";
 
 const Hero = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);
@@ -17,48 +17,48 @@ const Hero = () => {
 
       if (top < windowHeight && bottom >= 0 && !animationTriggered) {
         setAnimationTriggered(true);
-        imageElement.classList.add('animate__animated', 'animate__fadeInLeft');
-        dataElement.classList.add('animate__animated', 'animate__fadeInRight');
+        imageElement.classList.add("animate__animated", "animate__fadeInLeft");
+        dataElement.classList.add("animate__animated", "animate__fadeInRight");
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [animationTriggered]);
 
   return (
-    <div className='hero'>
-      <div className='hero-image-div' ref={heroImageRef}>
-        <img className='hero-image' src={traveler} alt='' />
+    <div className="hero">
+      <div className="hero-image-div" ref={heroImageRef}>
+        <img className="hero-image" src={traveler} alt="" />
       </div>
-      <div className='hero-data' ref={heroDataRef}>
-        <div className='heading'>
-          <h3>Travelers specializes in</h3>
+      <div className="hero-data" ref={heroDataRef}>
+        <div className="heading">
+          <h3>Travelers specializes in small</h3>
           <h3>
-            small <span className='heading-span'>group vacations</span>
+            <span className="heading-span">group vacations</span>
           </h3>
         </div>
-        <div className='para'>
+        <div className="para">
           <p>
-            <BsArrowRightCircleFill className='para-icon' />
-            A good traveler has no fixed plans
+            <BsArrowRightCircleFill className="para-icon" />A good traveler has
+            no fixed plans
           </p>
-          <p> an unexpected plans always</p>
-          <p> bring thrills in boring life</p>
+          <p className="para-discription"> an unexpected plans always</p>
+          <p className="para-discription"> bring thrills in boring life</p>
         </div>
-        <div className='para'>
+        <div className="para">
           <p>
-            <BsArrowRightCircleFill className='para-icon' />
+            <BsArrowRightCircleFill className="para-icon" />
             Places to stay around INDIA
           </p>
-          <p> India is most diverse country</p>
-          <p> there is many gems to go.</p>
+          <p className="para-discription"> India is most diverse country</p>
+          <p className="para-discription"> there is many gems to go.</p>
         </div>
-        <div className='hero-buttons'>
-          <button className='btn-1'>about company</button>
-          <button className='btn-2'>discover tour</button>
+        <div className="hero-buttons">
+          <button className="btn-1">about company</button>
+          <button className="btn-2">discover tour</button>
         </div>
       </div>
     </div>

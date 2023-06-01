@@ -1,129 +1,137 @@
 .tourCategory {
-    width: 100%;
-    height: 100vh;
-    border: 2px solid pink;
-    background-color: #F8F8F8;
-    padding: 4rem 0;
-    margin-top: 5rem;
+  width: 100%;
+  height: 100vh;
+  border: 2px solid pink;
+  background-color: #f8f8f8;
+  padding: 4rem 0;
+  margin-top: 5rem;
 }
 
 .tourCategory-heading {
-    text-align: center;
+  text-align: center;
 }
 
 .tourCategory-cards {
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .tourCategory-card {
-    width: 20vw;
-    height: 60vh;
-    position: relative;
-    -webkit-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
-    box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
+  width: 20vw;
+  height: 60vh;
+  position: relative;
+  -webkit-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: 17px 16px 74px -20px rgba(0, 0, 0, 0.75);
 }
-.tourCategory-card:hover
-{
-    box-shadow: none;
-    transition: 100ms ease-in;
+.tourCategory-card:hover {
+  box-shadow: none;
+  transition: 100ms ease-in;
 }
 
 .tourCategory-card-img {
-    width: 50%;
-    height: 40%;
-    object-fit: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 15%;
-    left: 26%;
+  width: 50%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 26%;
 }
 
 .tourCategory-card-data {
-    position: absolute;
-    bottom: 8%;
-    left: 20%;
-    display: flex;
+  position: absolute;
+  bottom: 8%;
+  left: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.tourCategory-card-data button {
+  margin-top: 2rem;
+  padding: 5px;
+  font-size: 12px;
+  text-transform: uppercase;
+  background-color: #232323;
+  color: white;
+  border: 1px solid #232323;
+}
+.tourCategory-card-data button:hover {
+  border: 1px solid #232323;
+  background-color: white;
+  color: #232323;
+  transition: 200ms ease;
+}
+
+/* meadia query */
+@media (max-width: 820px) {
+  .tourCategory {
+    height: 80vh;
+    padding-top: 1rem;
+    margin-bottom: 4rem;
+  }
+  .tourCategory-cards {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tourCategory-card {
+    padding: 0rem;
+    width: 40vw;
+    height: 35vh;
+    margin-bottom: 2rem;
+  }
+  .tourCategory-card-data {
+    bottom: 1%;
+    left: 10%;
+    text-align: center;
+    display: grid;
     flex-direction: column;
     align-items: center;
-}
-.tourCategory-card-data button
-{
-    margin-top: 2rem;
+  }
+  .tourCategory-card-img {
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    border-radius: 10%;
+    padding-bottom: 0rem;
+  }
+  .tourCategory-card-data button {
+    margin: 0.5rem;
     padding: 5px;
-    font-size:12px;
+    font-size: 12px;
     text-transform: uppercase;
     background-color: #232323;
     color: white;
     border: 1px solid #232323;
-
-}
-.tourCategory-card-data button:hover
-{
-    border: 1px solid #232323;
-    background-color: white;
-    color: #232323;
-    transition: 200ms ease;
-}
-
-
-/* meadia query */
-@media (max-width:820px) {
-   .tourCategory
-   {
-    height: 80vh;
-    padding:  0;
-    padding-top: 1rem;
-   }
-   .tourCategory-cards
-   {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-   }
-   .tourCategory-card {
-    width: 40vw;
-    height: 30vh;
-   margin-bottom: 30px;
- }
- .tourCategory-card-data {
-    position: absolute;
-    bottom: 8%;
-   left: 27%;
-}
-.tourCategory-card-img
-{
-    padding-bottom: 1rem;
-}
   }
+}
 
-
-  @media (max-width:400px) {
-    .tourCategory
-    {
-     height: auto;
-     padding:  0;
-     padding-top: 1rem;
-    }
-    .tourCategory-cards
-    {
-     display: grid;
-     grid-template-columns: repeat(1, 1fr);
-    }
-    .tourCategory-card {
-     width: 70vw;
-     height: 30vh;
+@media (max-width: 400px) {
+  .tourCategory {
+    height: auto;
+    padding: 0;
+    padding-top: 1rem;
+  }
+  .tourCategory-cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .tourCategory-card {
+    width: 70vw;
+    height: 30vh;
     margin-bottom: 30px;
   }
   .tourCategory-card-data {
-     position: absolute;
-     bottom: 8%;
+    position: absolute;
+    bottom: 8%;
     left: 24%;
- }
- .tourCategory-card-img
- {
-     padding-bottom: 1rem;
- }
-   }
-  
+  }
+  .tourCategory-card-img {
+    position: absolute;
+    padding-bottom: 1rem;
+  }
+}
