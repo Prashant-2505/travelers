@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { createUserWithEmailAndPassword, getAuth, updateProfile } from 'firebase/auth';
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithPopup, updateProfile } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import { db } from '../../firebase';
 import { doc, serverTimestamp, setDoc } from 'firebase/firestore';
-
+import {FcGoogle} from 'react-icons/fc'
 import SignUpSvg from '../../assets/svg/signUp.svg';
 import './style.css';
 
@@ -49,6 +49,27 @@ const SignUp = () => {
     }
   };
 
+
+  async function handleGoogleAuth()
+  {
+    try {
+       const auth = getAuth()
+       const provider = new GoogleAuthProvider()
+       const result = await signInWithPopup(auth,provider)
+       const user = result.user
+       const userDetails = 
+       {
+        name:user.displayName,
+        email:user.email
+       }
+       await setDoc(doc(db, 'users', user.uid), userDetails);
+       alert('Sign-up successful!');
+       navigate('/');
+    } catch (error) {
+      
+    }
+  }
+
   return (
     <div className="SignUpDiv" style={{ backgroundImage: `url(${SignUpSvg})`, height: '100vh', paddingTop: '5rem' }}>
       <div className="SignUpform">
@@ -58,9 +79,12 @@ const SignUp = () => {
           <input type="email" placeholder="Email" id="email" value={email} onChange={handleChange} />
           <input type="password" placeholder="Password" id="password" value={password} onChange={handleChange} />
 
-          <div>
+          <div className='formBtn'>
             <button className="submitBtn" type="submit">
               Sign Up
+            </button>
+            <button  className="submitBtn" onClick={handleGoogleAuth}>
+              Sign Up with Google <span className='google'><FcGoogle/></span>
             </button>
           </div>
         </form>

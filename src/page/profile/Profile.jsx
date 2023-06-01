@@ -6,7 +6,6 @@ import { db } from '../../firebase';
 import { doc, getDoc } from 'firebase/firestore';
 import Spinner from '../../components/spinner/Spinner';
 import { useNavigate } from 'react-router-dom';
-
 const Profile = () => {
   const auth = getAuth();
   const [data, setData] = useState({});
@@ -41,19 +40,41 @@ const Profile = () => {
   }
 
   return (
-    <div style={{ backgroundImage: `url(${SignUpSvg})`, height: '100vh', paddingTop: '5rem' }}>
+    <div style={{ backgroundColor: 'antiquewhite', height: '100vh', paddingTop: '5rem' }}>
       {loading ? (
         <Spinner />
       ) : (
-        <>
-          <p>{data.destination}</p>
-          <button className="" onClick={logout}>
-            Sign out
-          </button>
-        </>
+        <div id='main'>
+          <div className="profile_card_wrapper">
+            <div className="profile_card">
+              <div className="profile_data">
+                <h4>USER DETAILS</h4>
+                <h3>{auth.currentUser.displayName}</h3>
+                <p>{auth.currentUser.email}</p>
+              </div>
+              <div className="signOut_btn">
+                <button className="" onClick={logout}>
+                  Sign out
+                </button>
+              </div>
+            </div>
+            <div className='package_data'>
+              <h4>PACKAGE DETAILS</h4>
+              <h3>{data.destination}</h3>
+              <p> <span>Duration :</span> {data.duration}</p>
+              <p><span>Start date :</span> {data?.starting_date}</p>
+              <p><span>Price :</span> {data.price}</p>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );
 };
 
 export default Profile;
+
+
+
+
+

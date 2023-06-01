@@ -61,10 +61,18 @@ const PackageDetails = () => {
 
   const [value, onChange] = useState(new Date());
   const auth = getAuth();
+
+   // Assuming that `value` is a Date object or a string that can be parsed into a Date
+const date = new Date(value).toDateString(); // Convert to a human-readable date string
+const trimmedDate = date.slice(4); // Remove the first four characters (e.g., "Mon ")
+console.log(trimmedDate); // Output the trimmed date string
+
   const [bookingData, setBookingData] = useState({
     destination: '',
     duration: '',
     date: '',
+    price: '',
+    starting_date: ''
   });
 
   async function onClick() {
@@ -73,12 +81,13 @@ const PackageDetails = () => {
         const updatedBookingData = {
           destination: data?.Destination || '',
           duration: data?.Duration || '',
-          Starting_date: value || '',
+          starting_date: trimmedDate || 'N/A',
+          price: data.Price || '',
           name: user.displayName,
           email: user.email,
           phone: user.phoneNumber || '',
-        };
 
+        };
         setBookingData(updatedBookingData);
         await setDoc(doc(db, 'Bookings', user.uid), updatedBookingData);
         setVisible(true);
@@ -88,6 +97,8 @@ const PackageDetails = () => {
       }
     });
   }
+
+
 
   return (
     <div id='mainDiv'>
