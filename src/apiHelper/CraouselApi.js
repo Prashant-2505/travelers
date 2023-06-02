@@ -4,15 +4,22 @@
 const API = [
     {
         url:image1,
-        name:'himachal pardesh'
+        name:'himachal pardesh',
+        collection:'HIMACHALPARDESH',
+        price:'15,000'
     },
     {
        url:image3,
-        name:'utrakhand'
+        name:'utrakhand',
+        collection:"UTTRAKHAND",
+        price:'20,000'
     },
     {
         url:image2,
-        name:'Goa'
+        name:'Goa',
+        collection:"GOA",
+        price:'23,000'
+        
     },
 ]
 

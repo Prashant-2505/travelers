@@ -3,6 +3,7 @@ import './style.css'
 import image2 from '../../assets/image/romaticTour.jpg'
 import image3 from '../../assets/image/beachesTour.jpg'
 import image4 from '../../assets/image/mountainTour.jpg'
+import { Link } from 'react-router-dom'
 
 
 const TourCategory = () => {
@@ -17,8 +18,10 @@ const TourCategory = () => {
                     <img className='tourCategory-card-img' src="https://images.unsplash.com/photo-1484406566174-9da000fda645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" />
                     <div className="tourCategory-card-data">
                         <p>Discover forest</p>
-                        <p>+99 Destinations</p>
-                        <button>explore all tours</button>
+                       
+                       <Link to ='/UTTRAKHAND/3'>
+                       <button>explore all tours</button>
+                       </Link>
                     </div>
                 </div>
 
@@ -26,8 +29,10 @@ const TourCategory = () => {
                     <img className='tourCategory-card-img' src={image2} alt="romantic" />
                     <div className="tourCategory-card-data">
                         <p>Romantic gateway</p>
-                        <p>+99 Destinations</p>
-                        <button>explore all tours</button>
+                       
+                       <Link to ='/UTTRAKHAND/NANITAL'>
+                       <button>explore all tours</button>
+                       </Link>
                     </div>
                 </div>
 
@@ -35,7 +40,7 @@ const TourCategory = () => {
                     <img className='tourCategory-card-img' src={image3} alt="beaches" />
                     <div className="tourCategory-card-data">
                         <p>Unexplored beaches</p>
-                        <p>+99 Destinations</p>
+                       
                         <button>explore all tours</button>
 
                     </div>
@@ -45,7 +50,7 @@ const TourCategory = () => {
                     <img className='tourCategory-card-img' src={image4} alt="mountains" />
                     <div className="tourCategory-card-data">
                         <p>Mountains forest</p>
-                        <p>+99 Destinations</p>
+                       
                         <button>explore all tours</button>
                     </div>
                 </div>
