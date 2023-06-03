@@ -72,7 +72,8 @@ console.log(trimmedDate); // Output the trimmed date string
     duration: '',
     date: '',
     price: '',
-    starting_date: ''
+    starting_date: '',
+    image:''
   });
 
   async function onClick() {
@@ -86,6 +87,7 @@ console.log(trimmedDate); // Output the trimmed date string
           name: user.displayName,
           email: user.email,
           phone: user.phoneNumber || '',
+          image: data.Image || ''
 
         };
         setBookingData(updatedBookingData);

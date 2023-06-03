@@ -34,17 +34,20 @@ const Profile = () => {
     fetchData();
   }, [auth.currentUser, auth.currentUser.uid]);
 
+ 
+//  console.log(image)
   function logout() {
     auth.signOut();
     navigate('/');
   }
 
   return (
-    <div style={{ backgroundColor: 'antiquewhite', height: '100vh', paddingTop: '5rem' }}>
+<div style={{ backgroundImage: `url(${data.image})`, height: '500px', paddingTop: '3rem' }}>
       {loading ? (
         <Spinner />
-      ) : (
-        <div id='main'>
+      ) : 
+      (
+        <div id='main' style={{ backgroundImage: `url(${data.image})` }} >
           <div className="profile_card_wrapper">
             <div className="profile_card">
               <div className="profile_data">
