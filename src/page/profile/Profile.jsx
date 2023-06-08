@@ -41,7 +41,7 @@ const Profile = () => {
   }
 
   return (
-<div style={{ backgroundImage: `url(${data.image})`, height: '500px', paddingTop: '3rem' }}>
+<div style={{ backgroundImage: `url(${data.image})` }}>
       {loading ? (
         <Spinner />
       ) : 
