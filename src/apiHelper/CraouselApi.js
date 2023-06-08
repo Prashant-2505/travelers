@@ -1,6 +1,6 @@
- import image1 from '../assets/image/himachalPardesh.jpg'
- import image2 from '../assets/image/goa.jpg'
- import image3 from '../assets/image/uttrakhand.jpg'
+ import image1 from '../assets/image/himachalPardesh.webp'
+ import image2 from '../assets/image/goa.webp'
+ import image3 from '../assets/image/uttrakhand.webp'
 const API = [
     {
         url:image1,

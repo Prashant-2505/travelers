@@ -3,9 +3,9 @@ import './style.css'
 import {CCarousel } from '@coreui/react';
 import { CCarouselItem } from '@coreui/react'
 import '@coreui/coreui/dist/css/coreui.min.css';
-import family from '../../assets/image/family.jpg'
-import wildlife from '../../assets/image/wildlife.jpg'
-import romantic from '../../assets/image/romantic.jpg'
+import family from '../../assets/image/family.webp'
+import wildlife from '../../assets/image/wildlife.webp'
+import romantic from '../../assets/image/romantic.webp'
 
 
 

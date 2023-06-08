@@ -1,55 +1,53 @@
 import './style.css';
-import { db } from '../../firebase';
-import React, { useEffect, useState } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { BsFacebook } from 'react-icons/bs'
+import { AiFillTwitterCircle } from 'react-icons/ai'
+import { SiLinkedin } from 'react-icons/si'
+import { BsGithub } from 'react-icons/bs'
 
 const Footer = () => {
-  const [subCollection, setSubCollection] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-/* This is a `useEffect` hook that is used to fetch data from the Firebase database when the component
-mounts. It runs only once because the dependency array `[]` is empty. The `fetchData` function is an
-asynchronous function that retrieves data from the `HIMACHAL PARDESH` collection in the database
-using the `collection` and `getDocs` functions from the Firebase library. Once the data is
-retrieved, it is stored in the `subCollectionData` array and then set to the `subCollection` state
-using the `setSubCollection` function. Finally, the `loading` state is set to `false` to indicate
-that the data has been loaded. If there is an error during the data retrieval process, the error is
-logged to the console and the `loading` state is set to `false`. */
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const subCollectionRef = collection(db, 'HIMACHAL PARDESH');
-        const subCollectionSnapshot = await getDocs(subCollectionRef);
-        const subCollectionData = []
-        subCollectionSnapshot.forEach((doc)=>{
-          subCollectionData.push({...doc.data(), id: doc.id})
-        })
-        console.log(subCollectionData);
-        setSubCollection(subCollectionData);
-        setLoading(false);
-      } catch (error) {
-        console.error(error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
-    <div className='footer'>
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        subCollection.map((item) => (
-          <div key={item.id}>
-            <Link to={`/about/${item.id}`}>
-              <p>{item.id}</p>
-            </Link>
-          </div>
-        ))
-      )}
+    <div className='fotter'>
+      <div className="footerMain">
+        <div className="Footerlogo">
+          <h2>Travelers</h2>
+          <p>Choose your favourite destination</p>
+        </div>
+        <div className="social">
+          <BsFacebook className='Sicons' />
+          <AiFillTwitterCircle className='Sicons'/>
+          <SiLinkedin className='Sicons'/>
+          <BsGithub className='Sicons'/>
+        </div>
+      </div>
+      <div className="footerItem">
+        <div className="item1">
+          <h3>Project</h3>
+          <p>Catlog</p>
+          <p>Status</p>
+          <p>License</p>
+          <p>All version</p>
+        </div>
+        <div className="item2"><h3>Help</h3>
+          <p>Support</p>
+          <p>TroubleShooting</p>
+          <p>Contact us</p>
+          <p>License</p>
+        </div>
+        <div className="item3"><h3>Community</h3>
+          <p>Leetcode</p>
+          <p>Github</p>
+          <p>Twitter</p>
+          <p>Linkedin</p>
+        </div>
+        <div className="item4"><h3>Others</h3>
+          <p>Tems and Condition</p>
+          <p>Privacy policy</p>
+          <p>Service</p>
+          <p></p>
+        </div>
+      </div>
     </div>
   );
 };

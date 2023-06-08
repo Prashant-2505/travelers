@@ -32,7 +32,7 @@ function App() {
           </Route>
 
         </Routes>
-        {/* <Footer/> */}
+        <Footer/>
       </Router>
     </div>
   );

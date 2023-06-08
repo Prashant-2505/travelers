@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SignUpSvg from '../../assets/svg/signUp.svg';
 import './style.css';
 import { getAuth } from 'firebase/auth';
 import { db } from '../../firebase';

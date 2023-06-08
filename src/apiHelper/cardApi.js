@@ -1,9 +1,9 @@
-import image1 from '../assets/image/himachalCard.jpg'
-import image2 from '../assets/image/goaCard.jpg'
-import image3 from '../assets/image/punjabCard.jpg'
-import image4 from '../assets/image/uttrakhandCard.jpg'
-import image5 from '../assets/image/rajasthanCard.jpg'
-import image6 from '../assets/image/gujratCard.jpg'
+import image1 from '../assets/image/himachalCard.webp'
+import image2 from '../assets/image/goaCard.webp'
+import image3 from '../assets/image/punjabCard.webp'
+import image4 from '../assets/image/uttrakhandCard.webp'
+import image5 from '../assets/image/rajasthanCard.webp'
+import image6 from '../assets/image/gujratCard.webp'
 
 const cardApi = [
     {

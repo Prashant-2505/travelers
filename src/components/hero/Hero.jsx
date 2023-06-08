@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './style.css';
 import { BsArrowRightCircleFill } from 'react-icons/bs';
-import traveler from '../../assets/image/traveler.jpg'
+import traveler from '../../assets/image/traveler.webp'
 
 const Hero = () => {
   const [animationTriggered, setAnimationTriggered] = useState(false);

@@ -1,8 +1,8 @@
 import React from 'react'
 import './style.css'
-import image2 from '../../assets/image/romaticTour.jpg'
-import image3 from '../../assets/image/beachesTour.jpg'
-import image4 from '../../assets/image/mountainTour.jpg'
+import image2 from '../../assets/image/romaticTour.webp'
+import image3 from '../../assets/image/beachesTour.webp'
+import image4 from '../../assets/image/mountainTour.webp'
 import { Link } from 'react-router-dom'
 
 
