@@ -29,6 +29,7 @@
 .cardImg {
     height: 50%;
     width: 100%;
+    overflow: hidden;
 }
 
 .CardIMG {
@@ -36,6 +37,11 @@
     height: 100%;
     object-fit: cover;
 }
+.CardIMG:hover {
+    scale: 1.2;
+  transition: 400ms ease-in-out;
+}
+
 
 .cardData {
     height: 50%;

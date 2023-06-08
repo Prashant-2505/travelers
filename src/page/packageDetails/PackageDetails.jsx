@@ -7,7 +7,6 @@ import Spinner from '../../components/spinner/Spinner';
 import { AiFillLeftCircle, AiFillRightCircle } from 'react-icons/ai';
 import Calendar from 'react-calendar';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 import { CButton, CModal, CModalBody, CModalHeader } from '@coreui/react';
 
