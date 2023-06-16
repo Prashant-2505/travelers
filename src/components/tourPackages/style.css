@@ -23,7 +23,7 @@
 
 .packageCard:hover {
     transform: translatey(10px);
-    transition: 200ms ease;
+    transition: 400ms ease-in-out
 }
 
 .cardImg {

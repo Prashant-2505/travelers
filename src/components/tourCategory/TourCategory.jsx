@@ -15,47 +15,53 @@ const TourCategory = () => {
             </div>
             <div className="tourCategory-cards">
                 <div className="tourCategory-card">
-                    <img className='tourCategory-card-img' src="https://images.unsplash.com/photo-1484406566174-9da000fda645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" />
+                    <div className="cardimg">
+                        <img className='tourCategory-card-img' src="https://images.unsplash.com/photo-1484406566174-9da000fda645?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YW5pbWFsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" alt="" />
+                    </div>
                     <div className="tourCategory-card-data">
                         <p>Discover forest</p>
-                       
-                       <Link to ='/UTTRAKHAND/3'>
-                       <button>explore all tours</button>
-                       </Link>
+
+                        <Link to='/UTTRAKHAND/3'>
+                            <button>explore all tours</button>
+                        </Link>
                     </div>
                 </div>
 
                 <div className="tourCategory-card">
-                    <img className='tourCategory-card-img' src={image2} alt="romantic" />
+                    <div className="cardimg">
+                        <img className='tourCategory-card-img' src={image2} alt="romantic" />
+                    </div>
                     <div className="tourCategory-card-data">
                         <p>Romantic gateway</p>
-                       
-                       <Link to ='/UTTRAKHAND/NANITAL'>
-                       <button>explore all tours</button>
-                       </Link>
+
+                        <Link to='/UTTRAKHAND/NANITAL'>
+                            <button>explore all tours</button>
+                        </Link>
                     </div>
                 </div>
 
                 <div className="tourCategory-card">
-                    <img className='tourCategory-card-img' src={image3} alt="beaches" />
+                   <div className="cardimg">
+                   <img className='tourCategory-card-img' src={image3} alt="beaches" />
+                   </div>
                     <div className="tourCategory-card-data">
                         <p>Unexplored beaches</p>
-                       
+
                         <button>explore all tours</button>
 
                     </div>
                 </div>
 
                 <div className="tourCategory-card">
-                    <img className='tourCategory-card-img' src={image4} alt="mountains" />
+                  <div className="cardimg">  <img className='tourCategory-card-img' src={image4} alt="mountains" /></div>
                     <div className="tourCategory-card-data">
                         <p>Mountains forest</p>
-                       
+
                         <button>explore all tours</button>
                     </div>
                 </div>
 
-                
+
             </div>
         </div>
     )

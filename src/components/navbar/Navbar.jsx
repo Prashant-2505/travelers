@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { FiPhoneCall } from 'react-icons/fi'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { AiOutlineCloseSquare } from 'react-icons/ai'
 
@@ -35,9 +34,13 @@ const Navbar = () => {
 
   }, [lastScrollY]);
 
+
+  
   const handleClick = () => {
     setClicked(!clicked)
   }
+
+
 
   useEffect(()=>
   {
@@ -54,6 +57,8 @@ const Navbar = () => {
     })
   },[auth])
 
+
+  
 
   return (
     <div className={`Navbar ${showNavbar ? '' : 'navbar--hidden'} ${clicked ? 'mobile-nav' : ''}`}>

@@ -87,3 +87,17 @@
     padding: 0.6rem 2rem;
 
 }
+.DeleteBtn
+{
+    background-color: #232323;
+    color: white;
+    padding: 0.6rem 2rem;
+    border-radius: 10px;
+}
+.DeleteBtn:hover {
+    border: 2px solid #FF8869;
+    background-color: red;
+    transition: 200ms;
+    padding: 0.6rem 2rem;
+
+}

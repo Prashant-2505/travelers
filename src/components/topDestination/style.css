@@ -3,7 +3,6 @@
   width: 100%;
   height: auto;
   background-color: #f7f7f7;
-  margin-bottom: 1rem;
 }
 
 .topDestination-heading {
@@ -23,11 +22,11 @@
 }
 
 .cards {
-  margin: 2rem;
+  margin: 2rem 1rem 2rem 0;
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
+  grid-gap: 1.6rem;
 }
 
 .card {
@@ -125,28 +124,57 @@
   }
   .topDestination-heading
   {
-    padding: 20px;
+   padding: 1rem 2rem 1rem 2rem;
   }
   .cards {
     grid-template-columns: repeat(3, 1fr);
+    margin-right: 1rem;
+    margin-left: 1rem;
 
   }
 
   .card {
-    width: 100%;
-    height: 100%;
+    width: 30vw;
+    height: 25vh;
+    
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
  
   .cards {
-    grid-template-columns: repeat(2, 1fr);
-   
+    grid-template-columns: repeat(2, 45%);
+    overflow-x: scroll;
+    height: 60vh;
+    -webkit-box-shadow: 17px 16px 32px -20px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 17px 16px 32px -20px rgba(0, 0, 0, 0.75);
+    box-shadow: 17px 16px 32px -20px rgba(0, 0, 0, 0.75);
+  
+
   }
 
   .card {
-    width: 40vw;
-    height: 20vh;
+    width: 42vw;
+    height: 25vh;
+    border-radius: 10px;
+  
+  }
+  .card-data
+  {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .topDestination-heading h3 
+  {
+    font-size: 1.4rem;
+  }
+  .topDestination-heading p 
+  {
+    font-size: 0.8rem;
+  }
+
+  .topDestination-btn button 
+  {
+    display: none;
   }
 }

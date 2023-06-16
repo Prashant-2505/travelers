@@ -1,7 +1,6 @@
 import React from 'react'
-import { CButton, CCarousel } from '@coreui/react';
+import {  CCarousel } from '@coreui/react';
 import { CCarouselItem } from '@coreui/react'
-import { CCarouselCaption } from '@coreui/react'
 import '@coreui/coreui/dist/css/coreui.min.css';
 import './style.css'
 import API from '../../apiHelper/CraouselApi'

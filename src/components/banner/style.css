@@ -45,13 +45,20 @@ p {
 /* 
   medai query */
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
     .banner {
-        padding: 1rem;
-        margin: 0;
-        display: grid;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        gap: 1rem; 
         justify-content: center;
-        flex-wrap: nowrap;
+        padding: 1rem; 
+      }
+      
+    .banner-item
+    {
+        margin: 0;padding: 0;
+
     }
 
    
