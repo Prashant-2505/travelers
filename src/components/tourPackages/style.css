@@ -138,23 +138,23 @@
     }
 }
 
-@media (max-width:400px) {
+@media (max-width:500px) {
     h2 {
         position: relative;
         left: 24%;
     }
 
     .cardWrapper {
-        width: 100%;
         height: auto;
+        width: 10vh;
+        margin-bottom: 2rem;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px
     }
 
     .packageCard {
         margin: 3.2rem 2rem;
-        height: 45vh;
+        height: 60vh;
         width: 55vw;
         margin-bottom: 0;
         position: relative;
