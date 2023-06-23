@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import './style.css';
 import { BsArrowRightCircleFill } from 'react-icons/bs';
 import traveler from '../../assets/image/traveler.webp'
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate()
   const [animationTriggered, setAnimationTriggered] = useState(false);
   const heroImageRef = useRef(null);
   const heroDataRef = useRef(null);
@@ -57,7 +59,7 @@ const Hero = () => {
           <p> there is many gems to go.</p>
         </div>
         <div className='hero-buttons'>
-          <button className='btn-1'>about company</button>
+          <button onClick={()=>navigate('/about')} className='btn-1'>about company</button>
           <button className='btn-2'>discover tour</button>
         </div>
       </div>
