@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
 import './style.css';
 import { TfiHeadphoneAlt } from 'react-icons/tfi';
 import { BsPersonCircle , BsPeaceFill } from 'react-icons/bs';
@@ -6,26 +6,8 @@ import {MdOutlineAttachMoney}  from 'react-icons/md';
 import 'animate.css';
 
 const Banner = () => {
-  const [animationTriggered, setAnimationTriggered] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const bannerElement = document.querySelector('.banner');
-      const { top, bottom } = bannerElement.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-
-      if (top < windowHeight && bottom >= 0 && !animationTriggered) {
-        setAnimationTriggered(true);
-        bannerElement.classList.add('animate__animated', 'animate__backInRight');
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [animationTriggered]);
+  
 
   return (
     <div className='banner'>

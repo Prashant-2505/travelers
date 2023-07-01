@@ -36,10 +36,6 @@ p {
     font-size: 1rem;
 }
 
-/* animation */
-.animate__animated.animate__backInRight {
-    --animate-duration: 2s;
-}
 
 
 /* 
