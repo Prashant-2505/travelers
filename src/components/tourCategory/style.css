@@ -27,7 +27,7 @@
 
 .tourCategory-card:hover {
     box-shadow: none;
-    transition: 100ms ease-in;
+    transition: 100ms ease;
 }
 .cardimg 
 {

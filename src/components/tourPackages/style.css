@@ -19,11 +19,13 @@
     box-shadow: 3px 9px 17px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 3px 9px 17px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 9px 17px 0px rgba(0, 0, 0, 0.75);
+
+    transform: translateY(0);
+    transition: transform 400ms ease;
 }
 
 .packageCard:hover {
-    transform: translatey(10px);
-    transition: 400ms ease-in-out
+    transform: translateY(10px);
 }
 
 .cardImg {
