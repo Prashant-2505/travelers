@@ -41,23 +41,27 @@ const TourCategory = () => {
                 </div>
 
                 <div className="tourCategory-card">
-                   <div className="cardimg">
-                   <img className='tourCategory-card-img' src={image3} alt="beaches" />
-                   </div>
+                    <div className="cardimg">
+                        <img className='tourCategory-card-img' src={image3} alt="beaches" />
+                    </div>
                     <div className="tourCategory-card-data">
                         <p>Unexplored beaches</p>
+                        <Link to="/GOA/GOA2">
+                            <button>explore all tours</button>
+                        </Link>
 
-                        <button>explore all tours</button>
 
                     </div>
                 </div>
 
                 <div className="tourCategory-card">
-                  <div className="cardimg">  <img className='tourCategory-card-img' src={image4} alt="mountains" /></div>
+                    <div className="cardimg">  <img className='tourCategory-card-img' src={image4} alt="mountains" /></div>
                     <div className="tourCategory-card-data">
                         <p>Mountains forest</p>
+                        <Link to="/HIMACHALPARDESH/ROHTANG">
+                            <button>explore all tours</button>
+                        </Link>
 
-                        <button>explore all tours</button>
                     </div>
                 </div>
 

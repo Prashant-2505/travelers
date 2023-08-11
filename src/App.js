@@ -12,6 +12,7 @@ import SignIn from './page/signIn/SignIn';
 import SignUp from './page/signUp/SignUp';
 import Profile from './page/profile/Profile';
 import PrivateRoute from './route/PrivateRoute';
+import Contact from './page/contact/Contact';
 
 
 function App() {
@@ -26,7 +27,7 @@ function App() {
           <Route path='/:state/:city' element={<PackageDetails />}></Route>
           <Route path='/SignIn' element={<SignIn />}></Route>
           <Route path='/SignUp' element={<SignUp />}></Route>
-
+          <Route path='/contact' element={<Contact />}></Route>
           <Route path='/Profile' element={<PrivateRoute />}>
             <Route path='/Profile' element={<Profile />}></Route>
           </Route>
