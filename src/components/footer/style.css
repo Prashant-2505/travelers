@@ -71,20 +71,29 @@
         padding: 3rem 1rem;
         width: 100%;
     }
-  
- 
-  .Footerlogo h2 
-  {
-   font-size: 2rem;
-   text-align: center;
-  }
-  .Footerlogo p
-  {
-   font-size: 1rem;
-  }
-  .Sicons
-  {
-    font-size: 2rem;
-  }
-   
+
+
+    .Footerlogo h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .Footerlogo p {
+        font-size: 1rem;
+    }
+
+    .Sicons {
+        font-size: 2rem;
+    }
+
+    .footerItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        text-align: center;
+        text-align: left;
+        gap: 10px;
+    }
+
 }

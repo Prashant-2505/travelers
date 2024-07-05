@@ -92,6 +92,7 @@ console.log(trimmedDate); // Output the trimmed date string
         setBookingData(updatedBookingData);
         await setDoc(doc(db, 'Bookings', user.uid), updatedBookingData);
         setVisible(true);
+        setBookingData(null)
       } else {
         navigate('/SignIn');
         alert('Please login to book');
